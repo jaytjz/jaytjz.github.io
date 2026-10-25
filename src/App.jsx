@@ -319,7 +319,7 @@ function Contact() {
       <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
         <p className="reveal font-mono text-[11px] uppercase tracking-[0.18em] text-paper/60">Contact</p>
         <h2 className="reveal mt-6 font-display font-light text-[clamp(2.75rem,8vw,6rem)] leading-[0.98] tracking-[-0.045em]">
-          If you want to give me a job, pwetty pwease uwu.
+          Hiring?
         </h2>
         <a
           href={`mailto:${profile.email}`}
