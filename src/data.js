@@ -26,7 +26,7 @@ export const featured = [
     glyph: 'queues',
     stack: ['C', 'x86', 'QEMU', 'GDB'],
     summary:
-      'Extended a teaching OS kernel for x86 with a multi-level feedback queue scheduler and user process support: stack argument passing, 13 system calls for process control and file I/O, and user pointer validation that kills faulting processes without leaking resources.',
+      'Extended a teaching OS kernel for x86 with a multi-level feedback queue scheduler and user process support: stack argument passing, system calls for process control and file I/O, and user pointer validation that kills faulting processes without leaking resources.',
   },
   {
     title: 'FPGA fluid simulation',
@@ -57,7 +57,7 @@ export const featured = [
     glyph: 'pipeline',
     stack: ['SystemVerilog', 'Verilator', 'C++'],
     summary:
-      'A full RV32I processor taken from single-cycle to a five-stage pipeline with branch prediction, then integrated with split L1 and L2 set-associative caches. Verified against custom testbenches and signal-processing workloads.',
+      'A full RV32I processor taken from single-cycle to a five-stage pipeline with branch prediction, then integrated with split L1 and L2 set-associative caches.',
   },
 ]
 
