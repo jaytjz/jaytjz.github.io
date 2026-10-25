@@ -229,7 +229,7 @@ function Work() {
           <h2 className="font-display font-light text-5xl leading-none tracking-[-0.035em] sm:text-6xl">Projects I’m proud of</h2>
         </div>
         <p className="max-w-xs leading-relaxed text-ink-2 md:text-sm">
-          These were ******* hard, lots of all nighters but I learnt a lot.
+          These were ******* hard, lots of all-nighters but I learnt a lot.
         </p>
       </div>
 
@@ -284,8 +284,7 @@ function Index() {
       <div className="reveal">
         <h2 className="font-display font-light text-4xl leading-none tracking-[-0.035em] sm:text-5xl">Side Quests</h2>
         <p className="mt-4 max-w-xl leading-relaxed text-ink-2">
-          Okay-ish things school made me do, personal projects I may or may not have fully completed, and leftovers from The Odin
-          Project. (I spent one summer trying to learn web dev, but now AI just one-shots it.) :(
+          Projects that took fewer all-nighters.
         </p>
       </div>
       <ul className="reveal mt-10 border-t border-line text-sm">
