@@ -224,11 +224,11 @@ function Experience() {
 function Work() {
   return (
     <section id="work" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-24 sm:px-8 sm:py-32">
-      <div className="reveal flex items-end justify-between gap-6">
+      <div className="reveal flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-6">
         <div>
           <h2 className="font-display font-light text-5xl leading-none tracking-[-0.035em] sm:text-6xl">Projects I’m proud of</h2>
         </div>
-        <p className="hidden max-w-xs text-sm leading-relaxed text-ink-2 md:block">
+        <p className="max-w-xs leading-relaxed text-ink-2 md:text-sm">
           These were ******* hard, lots of all nighters but I learnt a lot.
         </p>
       </div>
