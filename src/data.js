@@ -3,7 +3,7 @@
 export const profile = {
   name: 'Jeremy Tan',
   github: 'https://github.com/jaytjz',
-  email: 'jeremytanjanzhe@gmail.com',
+  email: 'jeremy.tan23@imperial.ac.uk',
   linkedin: 'https://www.linkedin.com/in/jeremy-tan-813b38227/',
   cv: '/Jeremy_Tan_CV.pdf',
 }
@@ -16,7 +16,7 @@ export const featured = [
     glyph: 'sparse',
     stack: ['SystemVerilog', 'Python', 'TSMC 65 nm'],
     summary:
-      'Designing a sparse matrix multiplication (SpMM) accelerator targeting tapeout on a 1 mm² TSMC 65 nm die. The design started from cycle-level models of three architectures: an output-stationary systolic array, a CSR × dense SpMM engine and a Gustavson-style SpMSpM pipeline.',
+      'Designing a sparse matrix multiplication (SpMM) accelerator targeting tapeout on a 1 mm² TSMC 65 nm die.',
   },
   {
     title: 'PintOS',
@@ -65,6 +65,7 @@ export const experience = [
   {
     role: 'Digital Verification Intern',
     org: 'Qualcomm',
+    glyph: 'waveforms',
     place: 'Cambridge, UK',
     dates: 'Apr – Sep 2026',
     points: [
@@ -76,6 +77,7 @@ export const experience = [
   {
     role: 'Hardware Engineering Intern',
     org: 'Infineon',
+    glyph: 'adc',
     place: 'Penang, Malaysia',
     dates: 'Jul – Sep 2025',
     points: [
@@ -85,6 +87,7 @@ export const experience = [
   {
     role: 'Undergraduate Research Assistant',
     org: 'Imperial College London',
+    glyph: 'drone',
     place: 'London, UK',
     dates: 'Jul – Sep 2024',
     points: [

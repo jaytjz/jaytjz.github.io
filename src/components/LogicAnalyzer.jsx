@@ -229,16 +229,23 @@ export default function LogicAnalyzer({ className = 'aspect-[16/11]' }) {
     }
 
     let frame
+    let stopped = false
     const start = performance.now()
     const tick = (now) => {
       draw(((now - start) / 1000) * SPEED)
       frame = requestAnimationFrame(tick)
     }
-    // With reduced motion, show a still frame of the punchline.
-    if (reduce) draw(18 * SEG)
-    else frame = requestAnimationFrame(tick)
+    // Canvas keeps whatever font was available when ctx.font was first set,
+    // so wait for the mono font before drawing any text.
+    document.fonts.load(mono).finally(() => {
+      if (stopped) return
+      // With reduced motion, show a still frame of the punchline.
+      if (reduce) draw(18 * SEG)
+      else frame = requestAnimationFrame(tick)
+    })
 
     return () => {
+      stopped = true
       cancelAnimationFrame(frame)
       ro.disconnect()
     }
