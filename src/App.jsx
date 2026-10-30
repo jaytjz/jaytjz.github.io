@@ -226,7 +226,7 @@ function Work() {
           <h2 className="font-display font-light text-5xl leading-none tracking-[-0.035em] sm:text-6xl">Selected projects</h2>
         </div>
         <p className="max-w-xs leading-relaxed text-ink-2 md:text-sm">
-          Longer projects across hardware design, compilers and operating systems.
+          These were hard, lots of all-nighters but I learnt a lot.
         </p>
       </div>
 
