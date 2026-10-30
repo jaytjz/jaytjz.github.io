@@ -111,7 +111,7 @@ export const highlights = [
 export const archive = [
   { title: 'Piano synthesiser', desc: 'Polyphonic synth on networked STM32 boards with FreeRTOS and CAN bus', lang: 'C++', year: '2026' },
   { title: 'Digital System Design', desc: 'Custom floating-point and CORDIC instructions on an FPGA SoC', lang: 'SystemVerilog', year: '2026', repo: 'DSD_CW' },
-  { title: 'Totally not Mario Party', desc: 'Multiplayer party game front end', lang: 'React', year: '2025', repo: 'totally-not-mario-party-front-end' },
+  { title: 'Party game', desc: 'Front end for an online multiplayer party game', lang: 'React', year: '2025', repo: 'totally-not-mario-party-front-end' },
   { title: 'Twitter clone', desc: 'Full-stack social app: auth, follows, posts and a feed', lang: 'React', year: '2024', repo: 'FakeTwitterClone' },
   { title: 'Pokémemo', desc: 'Memory card game built on the PokéAPI', lang: 'React', year: '2024', repo: 'pokememo' },
   { title: 'Rover control', desc: 'Web dashboard and firmware for a Year 1 autonomous rover', lang: 'C++', year: '2024', repo: 'imperial-rover-y1' },

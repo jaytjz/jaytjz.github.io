@@ -1,18 +1,18 @@
 import { useEffect, useRef } from 'react'
 
 // Hero visual: a logic analyzer capture scrolling past. The data bus carries
-// random hex words, with the odd BEEP and B00P highlighted. Every loop the design crashes
+// random hex words. Every loop the design crashes
 // (the bus goes X), rst pulses, and the bus spells out the answer to life,
 // the universe and everything.
 const ROWS = ['clk', 'rst', 'data']
 const CYCLE = 32 // px per clock cycle
 const SEG = CYCLE * 2 // px per bus word
-const SPEED = 48 // px per second
+const SPEED = 64 // px per second
 const LABEL_W = 44
 
 // One loop of the capture, in bus slots. Scripted words start at a slot and
 // can span several so long words fit; every other slot is a random word.
-const LOOP = 40
+const LOOP = 28
 const SCRIPT = [
   [8, 'XXXX', 1],
   [9, 'XXXX', 1],
@@ -44,11 +44,8 @@ const hash = (n) => {
 const mod = (a, n) => ((a % n) + n) % n
 const loopPos = (u) => mod(u, LOOP * SEG)
 
-// Ordinary hex traffic, with the odd BEEP or B00P mixed in.
+// Ordinary hex traffic.
 const randomWord = (s) => {
-  const r = hash(s + 11)
-  if (r < 0.12) return 'BEEP'
-  if (r < 0.22) return 'B00P'
   return Math.floor(hash(s + 97) * 0x10000).toString(16).toUpperCase().padStart(4, '0')
 }
 
@@ -59,7 +56,6 @@ const busAt = (s) => {
   return { word: randomWord(s), start: s, span: 1, scripted: false }
 }
 const isX = (word) => word === 'XXXX'
-const isBeep = (word) => word === 'BEEP' || word === 'B00P'
 
 // Signal levels at scroll position u: true = high, false = low, null = X.
 const level = {
@@ -151,7 +147,7 @@ export default function LogicAnalyzer({ className = 'aspect-[16/11]' }) {
         ctx.stroke()
         ctx.globalAlpha = 1
         if (b - a > ctx.measureText(word).width + 12) {
-          ctx.fillStyle = isX(word) ? crash : isBeep(word) || scripted ? accent : ink
+          ctx.fillStyle = isX(word) ? crash : scripted ? accent : ink
           ctx.textAlign = 'center'
           ctx.fillText(word, (a + b) / 2, mid + 0.5)
           ctx.textAlign = 'left'
@@ -256,7 +252,7 @@ export default function LogicAnalyzer({ className = 'aspect-[16/11]' }) {
       ref={canvasRef}
       className={`block w-full ${className}`}
       role="img"
-      aria-label="Animated logic analyzer trace: the data bus shows BEEP and B00P, crashes, gets reset, then spells out THE ANSWER TO LIFE THE UNIVERSE AND EVERYTHING = 42"
+      aria-label="Animated logic analyzer trace: the data bus carries hex words, crashes, gets reset, then spells out THE ANSWER TO LIFE THE UNIVERSE AND EVERYTHING = 42"
     />
   )
 }

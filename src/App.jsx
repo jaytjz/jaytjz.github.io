@@ -51,7 +51,7 @@ function Nav() {
   const links = [
     ['Experience', '#experience'],
     ['Projects', '#work'],
-    ['Side Quests', '#index'],
+    ['Other Projects', '#index'],
     ['Contact', '#contact'],
   ]
   return (
@@ -119,12 +119,9 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-6xl px-5 pt-28 pb-16 sm:px-8 sm:pt-36">
-      <h1 className="reveal font-display font-light text-[clamp(2.75rem,7vw,5.75rem)] leading-[0.98] tracking-[-0.045em]">
-        Making computers
-        <span className="text-ink-3"> go beep&nbsp;boop.</span>
-      </h1>
-      <div className="reveal mt-10 flex flex-col gap-6 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+    <section id="top" className="mx-auto max-w-6xl px-5 pt-28 pb-16 sm:px-8 sm:pt-32">
+      <h1 className="sr-only">{profile.name}</h1>
+      <div className="reveal flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
           <img
             src={portrait}
@@ -190,7 +187,7 @@ function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-6xl scroll-mt-20 px-5 pt-24 sm:px-8 sm:pt-32">
       <div className="reveal">
-        <h2 className="font-display font-light text-5xl leading-none tracking-[-0.035em] sm:text-6xl">Where I've worked</h2>
+        <h2 className="font-display font-light text-5xl leading-none tracking-[-0.035em] sm:text-6xl">Experience</h2>
       </div>
       <ol className="mt-14 border-t border-line">
         {experience.map((e) => (
@@ -226,10 +223,10 @@ function Work() {
     <section id="work" className="mx-auto max-w-6xl scroll-mt-20 px-5 py-24 sm:px-8 sm:py-32">
       <div className="reveal flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-6">
         <div>
-          <h2 className="font-display font-light text-5xl leading-none tracking-[-0.035em] sm:text-6xl">Projects I’m proud of</h2>
+          <h2 className="font-display font-light text-5xl leading-none tracking-[-0.035em] sm:text-6xl">Selected projects</h2>
         </div>
         <p className="max-w-xs leading-relaxed text-ink-2 md:text-sm">
-          These were ******* hard, lots of all-nighters but I learnt a lot.
+          Longer projects across hardware design, compilers and operating systems.
         </p>
       </div>
 
@@ -282,9 +279,9 @@ function Index() {
   return (
     <section id="index" className="mx-auto max-w-6xl scroll-mt-20 px-5 pb-24 sm:px-8 sm:pb-32">
       <div className="reveal">
-        <h2 className="font-display font-light text-4xl leading-none tracking-[-0.035em] sm:text-5xl">Side Quests</h2>
+        <h2 className="font-display font-light text-4xl leading-none tracking-[-0.035em] sm:text-5xl">Other projects</h2>
         <p className="mt-4 max-w-xl leading-relaxed text-ink-2">
-          Projects that took fewer all-nighters.
+          Smaller coursework and personal projects.
         </p>
       </div>
       <ul className="reveal mt-10 border-t border-line text-sm">
@@ -318,11 +315,14 @@ function Contact() {
       <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
         <p className="reveal font-mono text-[11px] uppercase tracking-[0.18em] text-paper/60">Contact</p>
         <h2 className="reveal mt-6 font-display font-light text-[clamp(2.75rem,8vw,6rem)] leading-[0.98] tracking-[-0.045em]">
-          Hiring?
+          Get in touch.
         </h2>
+        <p className="reveal mt-6 max-w-xl text-lg leading-relaxed text-paper/70">
+          I’m looking for graduate roles starting September 2027.
+        </p>
         <a
           href={`mailto:${profile.email}`}
-          className="reveal mt-10 inline-block break-all border-b border-paper/30 pb-1 text-lg transition-colors hover:border-accent hover:text-accent sm:text-2xl"
+          className="reveal mt-8 inline-block break-all border-b border-paper/30 pb-1 text-lg transition-colors hover:border-accent hover:text-accent sm:text-2xl"
         >
           {profile.email}
         </a>
